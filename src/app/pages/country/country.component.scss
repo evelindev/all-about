@@ -1,0 +1,18 @@
+.country-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: rgb(187, 187, 187);
+    border-radius: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 90px;
+}
+
+.country-wrapper img {
+  height: 325px;
+}
+
+.main-info {
+  font-size: 20px;
+  padding: 10px;
+}

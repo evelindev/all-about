@@ -1,0 +1,36 @@
+<section>
+    <div class="cards-container">
+        <div  
+            class="country-card" 
+            *ngFor="let country of countries"
+            (click)="goToCountry(country.cca3, country.capital[0].toString())"
+        >
+
+            <h1 class="name-country"> 
+                {{country.name.common}}
+            </h1>
+            <div class="country-flag">
+                <img 
+                    [src]="country.flags.png" 
+                    alt="Флаг {{ country.name.common }}"
+                />
+            </div>
+            <div class="content-container">
+                <div *ngFor="let currency of country.currencies | keyvalue">
+                    <p>Валюта: {{ currency.value.name }}</p> 
+                </div>
+                <p>
+                    Регион: {{country.region}}
+                </p>
+                <p>
+                    Популяция: {{country.population}}
+                </p>
+                <p>
+                    Часовой пояс: {{country.timezones}}
+                </p>
+                idd:{{country.cca3}}
+            </div>
+
+        </div>
+    </div>
+</section>

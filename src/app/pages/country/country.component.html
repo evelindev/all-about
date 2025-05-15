@@ -1,0 +1,21 @@
+<div class="country-wrapper">
+    <img 
+        [src]="countryData?.flags?.png" 
+    />
+        <div class="main-info">
+            <h1>Международное название страны: {{countryData?.name?.common}}</h1>
+            <p>Оригинальное название: {{countryData?.name?.official}}</p>
+            <p>Столица: {{countryData?.capital}}</p>
+            <div *ngFor="let language of countryData?.languages | keyvalue">
+                <p>Язык: {{language.key}}</p> 
+            </div>
+            <div *ngFor="let currency of countryData?.currencies | keyvalue">
+                <p>Валюта: {{currency?.value?.symbol}}</p> 
+                <p>Валюта: {{currency?.value?.name}}</p> 
+            </div>
+        </div>
+</div>
+<div class="rest-info">
+    <p>ПАГОДА ЕБУЧАЯЖ</p> <p>{{weatherData?.current?.temp_c}}</p>
+</div>
+
